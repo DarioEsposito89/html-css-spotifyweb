@@ -180,6 +180,8 @@ a {
     left: 0;
 }
 
+
+
 .upgrade-bar a {
     text-decoration: none;
     color: white;
@@ -187,12 +189,18 @@ a {
     border: 2px solid white;
     border-radius: 25px;
     padding: 1rem 2rem;
-} */
+}
+
+.upgrade-bar a:hover {
+    padding: 1.5rem 2.5rem;
+    border-radius: 30px;
+}
 
 /* ------------ MAIN CONTENT ------------ */
 
 .main-content {
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
     overflow: auto;
     padding: 1rem;
@@ -205,9 +213,9 @@ section {
 
 .main-menu {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 2rem 0;
-    border: 2px solid pink;
     margin-top: 85px;
 }
 
@@ -317,6 +325,7 @@ section {
     justify-content: center;
     flex-grow: 1;
     gap: 1rem;
+    padding: 1rem;
 }
 
 .play-icon {
@@ -359,7 +368,7 @@ section {
     display: flex;
     gap: 1rem;
     font-size: 15px;
-    color: #666666;
+    color: white;
     align-items: center;
     justify-content: center;
     width: 15%;
