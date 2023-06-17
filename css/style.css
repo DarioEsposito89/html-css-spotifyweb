@@ -229,6 +229,10 @@ section {
     color: #6e7075;
 }
 
+.main-menu ul li:hover a {
+    color: white;
+}
+
 
 /*------------ MUSIC CARD --------- */
 
