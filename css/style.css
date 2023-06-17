@@ -280,6 +280,32 @@ section {
 
 .music-played {
     background-color: aqua;
+    display: flex;
+    align-items: center;
+    width: 15%;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.music-played img {
+    object-fit: contain;
+    width: 30%;
+
+}
+
+.music-icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 80%;
+}
+
+.autor h5 {
+    color: white;
+}
+
+.autor h6 {
+    color: #6e7075;
 }
 
 .player {
