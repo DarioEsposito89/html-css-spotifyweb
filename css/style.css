@@ -19,11 +19,6 @@ body>*, .general-container>* {
     border: 1px solid red;
 }
 
-.play-bar {
-    flex-shrink: 0;
-    background-color: #282828;
-}
-
 .general-container {
     flex-grow: 1;
     overflow: auto;
@@ -40,19 +35,31 @@ body>*, .general-container>* {
 .nav-bar {
     display: flex;
     width: 225px;
-    overflow: auto;
+    overflow: hidden;
     flex-shrink: 0;
     background-color: black;
     flex-direction: column;
+    z-index: 1;
 }
 
 a {
     text-decoration: none;
 }
 
+.logo-small {
+    width: 30%;
+    max-width: 100%;
+    margin-left: -15px;
+}
+
 .logo-spotify {
     width: 80%;
     padding: 1rem;
+    margin-left: 10px;
+}
+
+.logo-spotify .logo-small {
+    display: none;
 }
 
 .nav-bar span {
@@ -86,6 +93,8 @@ a {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    flex-grow: 1;
+    overflow: auto;
     padding-top: 1rem;
     padding-left: 1rem;
 }
@@ -112,18 +121,21 @@ a {
 }
 
 .nav-profile {
-    width: 15px;
-    height: 15px;
-    background-color: #6e7075;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.nav-profile span {
+    color: white;
 }
 
 .nav-profile img {
     object-fit: contain;
-    height: 12px;
+    width: 10%;
+    background-color: #6e7075;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
 }
 
 .nav-install {
@@ -131,6 +143,8 @@ a {
     margin-top: auto;
     flex-direction: column;
     gap: 1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
 }
 
 .nav-install > a:hover i {
@@ -147,6 +161,7 @@ a {
     flex-direction: column;
     flex-grow: 2;
     overflow: auto;
+    width: 100%;
 }
 
 .main-container, .upgrade-bar, .main-menu .main-content {
@@ -156,15 +171,13 @@ a {
 /* ---------- UPGRADE BAR -------------*/
 
 .upgrade-bar {
-    width: 85%;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     background-color: #080b12;
     padding: 15px;
-    overflow: auto;
     position: fixed;
-    
-
+    left: 0;
 }
 
 .upgrade-bar a {
@@ -229,6 +242,7 @@ section {
 }
 
 .music-cards {
+    width: 100%;
     flex-grow: 1;
     flex-basis: calc((100% / 6) - 1rem)
 }
@@ -242,7 +256,6 @@ section {
 .card img {
     width: 100%;
     object-fit: contain;
-    position: relative;
 }
 
 .main-content h3 {
@@ -254,6 +267,29 @@ section {
     border-radius: 50%;
     width: 100%;
 }
+
+
+/* ------------ PLAY BAR ------------*/
+
+.play-bar {
+    flex-shrink: 0;
+    background-color: #282828;
+    display: flex;
+    justify-content: space-between;
+}
+
+.music-played {
+    background-color: aqua;
+}
+
+.player {
+    background-color: red;
+}
+
+.audio-video-impostation {
+    background-color: yellow;
+}
+
 
 
 
