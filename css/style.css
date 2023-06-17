@@ -279,7 +279,6 @@ section {
 }
 
 .music-played {
-    background-color: aqua;
     display: flex;
     align-items: center;
     width: 15%;
@@ -308,14 +307,77 @@ section {
     color: #6e7075;
 }
 
+.audio-video-impostation {
+    width: 30%;
+}
+
 .player {
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 1rem;
+}
+
+.play-icon {
+    display: flex;
+    gap: 3rem;
+    font-size: 30px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-icon :nth-child(3) {
+    font-size: 50px;
+}
+
+.play-time {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.time-bar {
+    background-color: #505050;
+    width: 50%;
+    height: 30%;
+    border-radius: 30px;
+}
+
+.time-bar div {
+    background-color: #c1c1c1;
+    width: 20%;
+    height: 100%;
+    border-radius: 30px;
 }
 
 .audio-video-impostation {
-    background-color: yellow;
+    display: flex;
+    gap: 1rem;
+    font-size: 15px;
+    color: #666666;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
 }
 
+.audio-bar {
+    background-color: #505050;
+    width: 30%;
+    height: 5%;
+    border-radius: 30px;
+}
+
+.audio-bar div {
+    background-color: #c1c1c1;
+    width: 30%;
+    height: 100%;
+    border-radius: 30px;
+}
 
 
 
