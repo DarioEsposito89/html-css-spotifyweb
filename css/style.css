@@ -262,6 +262,26 @@ section {
     flex-basis: calc((100% / 6) - 1rem)
 }
 
+.music-cards-img {
+    position: relative;
+}
+
+.music-cards-img:hover .center-overlay i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(58, 58, 58, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    font-size: 300%;
+}
+
+.music-cards-img  i {
+    display: none;
+}
+
 .card {
     border: 2px solid greenyellow;
     text-align: center;
