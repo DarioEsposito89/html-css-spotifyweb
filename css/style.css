@@ -13,10 +13,6 @@ body {
     flex-direction: column;
 }
 
-body>*, .general-container>* {
-    border: 1px solid red;
-}
-
 .general-container {
     flex-grow: 1;
     overflow: auto;
@@ -166,9 +162,9 @@ a {
     width: 100%;
 }
 
-.main-container, .upgrade-bar, .main-menu .main-content {
+/* .main-container, .upgrade-bar, .main-menu .main-content {
     border: 2px solid red;
-}
+} */
 
 /* ---------- UPGRADE BAR -------------*/
 
@@ -217,15 +213,17 @@ section {
 .main-menu {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     padding: 2rem 0;
     margin-top: 85px;
+    justify-content: center;
 }
 
 .main-menu ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     list-style: none;
+    justify-content: center;
 }
 
 .main-menu a {
@@ -283,7 +281,6 @@ section {
 }
 
 .card {
-    border: 2px solid greenyellow;
     text-align: center;
     color: white;
 }
@@ -316,7 +313,6 @@ section {
 .music-played {
     display: flex;
     align-items: center;
-    width: 15%;
     padding-left: 10px;
     padding-right: 10px
 }
@@ -349,10 +345,6 @@ section {
 
 .autor h6:hover {
     text-decoration:underline;
-}
-
-.audio-video-impostation {
-    width: 30%;
 }
 
 .player {
