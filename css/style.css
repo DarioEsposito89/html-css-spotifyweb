@@ -357,6 +357,10 @@ section {
     font-size: 50px;
 }
 
+.play-icon :nth-child(3):hover {
+    font-size: 60px;
+}
+
 .play-time {
     color: white;
     display: flex;
@@ -374,10 +378,25 @@ section {
 }
 
 .time-bar div {
+    display: flex;
+    justify-content: right;
     background-color: #c1c1c1;
     width: 20%;
     height: 100%;
     border-radius: 30px;
+}
+
+.time-bar div:hover {
+    background-color: greenyellow;
+}
+
+.time-bar div:hover .play-circle-time {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    align-self: center;
+
 }
 
 .audio-video-impostation {
@@ -398,10 +417,25 @@ section {
 }
 
 .audio-bar div {
+    display: flex;
     background-color: #c1c1c1;
     width: 30%;
     height: 100%;
     border-radius: 30px;
+    justify-content: right;
+    
+}
+
+.audio-bar div:hover {
+    background-color: greenyellow;
+}
+
+.audio-bar div:hover .play-circle-audio {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    align-self: center;
 }
 
 
