@@ -458,10 +458,39 @@ section {
     align-self: center;
 }
 
+/*--------------- MEDIA QUERY ------------- */
 
+@media screen and (max-width: 600px) {
+    /* NAV BAR */
+    .nav-bar span {
+        display: none;
+    }
 
+    .nav-bar .logo-normal {
+        display: none;
+    }
 
+    .nav-bar .logo-small {
+        display: inline-block;
+    }
 
+    .nav-playlist {
+        display: none;
+    }
 
+    .nav-bar {
+        width: 60px;
+    }
 
+    .logo-spotify {
+        width: 220%;
+    }
 
+    .home, .search, .library {
+        width: 60%;
+    }
+
+    .nav-profile img {
+        width: 50%;
+    }
+}    
