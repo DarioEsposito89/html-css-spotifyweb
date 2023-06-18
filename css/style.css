@@ -460,6 +460,14 @@ section {
 
 /*--------------- MEDIA QUERY ------------- */
 
+@media screen and (max-width: 1100px) {
+    .music-cards {
+        width: 100%;
+        flex-grow: 1;
+        flex-basis: calc((100% / 4) - 1rem)
+    }
+}
+
 @media screen and (max-width: 600px) {
     /* NAV BAR */
     .nav-bar span {
@@ -493,4 +501,11 @@ section {
     .nav-profile img {
         width: 50%;
     }
-}    
+
+    .music-cards {
+        width: 100%;
+        flex-grow: 1;
+        flex-basis: calc((100% / 2) - 1rem)
+    }
+}
+
