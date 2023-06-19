@@ -13,6 +13,10 @@ body {
     flex-direction: column;
 }
 
+a {
+    text-decoration: none;
+}
+
 .general-container {
     flex-grow: 1;
     overflow: auto;
@@ -26,6 +30,7 @@ body {
     width: 100%;
 }
 
+/*------------- NAVIGATION BAR ------------- */
 .nav-bar {
     display: flex;
     width: 225px;
@@ -34,10 +39,6 @@ body {
     background-color: black;
     flex-direction: column;
     z-index: 3;
-}
-
-a {
-    text-decoration: none;
 }
 
 .logo-small {
@@ -69,6 +70,7 @@ a {
     padding-bottom: 5px;
     margin-left: 10px;
     align-items: center;
+    white-space: nowrap;
 }
 
 .home {
@@ -79,6 +81,7 @@ a {
     filter: invert(51%) sepia(6%) saturate(253%) hue-rotate(185deg) brightness(89%) contrast(94%);
 }
 
+/* ---------- HOVER --------- */
 .nav-btn-container > a:hover img {
     filter: none;
 }
@@ -87,6 +90,7 @@ a {
     color: white;
 }
 
+/* ---------- NAVIGATION PLAYLIST -----------*/
 .nav-playlist {
     display: flex;
     flex-direction: column;
@@ -106,6 +110,16 @@ a {
     padding: 10px;
 }
 
+.playlist-name {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+/* ---------- HOVER --------- */
+
 .btn-playlist:hover i {
     background-color: white;
 }
@@ -114,10 +128,14 @@ a {
     color: white;
 }
 
-.nav-playlist > a:hover span {
+.nav-playlist > a:hover span, 
+.playlist-name span:hover {
     color: white;
 }
 
+
+
+/*----------- INSTALL APP ------------*/
 .nav-profile {
     display: flex;
     gap: 1rem;
@@ -143,6 +161,7 @@ a {
     gap: 1rem;
     padding-top: 1rem;
     padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .nav-install > a:hover i {
@@ -153,6 +172,8 @@ a {
     color: white;
 }
 
+
+/*-------------- MAIN CONTAINER -------------- */
 .main-container {
     background-color: #141922;
     display: flex;
@@ -161,10 +182,6 @@ a {
     overflow: auto;
     width: 100%;
 }
-
-/* .main-container, .upgrade-bar, .main-menu .main-content {
-    border: 2px solid red;
-} */
 
 /* ---------- UPGRADE BAR -------------*/
 
@@ -179,8 +196,6 @@ a {
     z-index: 2;
 }
 
-
-
 .upgrade-bar a {
     text-decoration: none;
     color: white;
@@ -190,9 +205,10 @@ a {
     padding: 1rem 2rem;
 }
 
+/* ---------- HOVER --------- */
+
 .upgrade-bar a:hover {
-    padding: 1.5rem 2.5rem;
-    border-radius: 30px;
+    transform: scale(1.1);
 }
 
 /* ------------ MAIN CONTENT ------------ */
@@ -230,6 +246,8 @@ section {
     color: #6e7075;
 }
 
+/* ---------- HOVER --------- */
+
 .main-menu ul li:hover a {
     color: white;
 }
@@ -264,18 +282,6 @@ section {
     position: relative;
 }
 
-.music-cards-img:hover .center-overlay i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(58, 58, 58, 0.5);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    font-size: 300%;
-}
-
 .music-cards-img  i {
     display: none;
 }
@@ -300,6 +306,20 @@ section {
     width: 100%;
 }
 
+/* ---------- HOVER --------- */
+
+.music-cards-img:hover .center-overlay i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(58, 58, 58, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    font-size: 300%;
+}
+
 
 /* ------------ PLAY BAR ------------*/
 
@@ -314,7 +334,7 @@ section {
     display: flex;
     align-items: center;
     padding-left: 10px;
-    padding-right: 10px
+    width: 300px;
 }
 
 .music-played img {
@@ -329,11 +349,6 @@ section {
     gap: 1rem;
     width: 80%;
 }
-
-.favourite-folder > *:hover {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(311deg) brightness(101%) contrast(101%);
-}
-
 
 .autor h5 {
     color: white;
@@ -358,19 +373,11 @@ section {
 
 .play-icon {
     display: flex;
-    gap: 3rem;
-    font-size: 30px;
+    gap: 2rem;
+    font-size: 20px;
     color: white;
     align-items: center;
     justify-content: center;
-}
-
-.play-icon :nth-child(3) {
-    font-size: 50px;
-}
-
-.play-icon :nth-child(3):hover {
-    font-size: 60px;
 }
 
 .play-time {
@@ -398,19 +405,6 @@ section {
     border-radius: 30px;
 }
 
-.time-bar div:hover {
-    background-color: greenyellow;
-}
-
-.time-bar div:hover .play-circle-time {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    align-self: center;
-
-}
-
 .audio-video-impostation {
     display: flex;
     gap: 1rem;
@@ -418,7 +412,7 @@ section {
     color: white;
     align-items: center;
     justify-content: center;
-    width: 15%;
+    width:300px;
 }
 
 .audio-bar {
@@ -438,6 +432,33 @@ section {
     
 }
 
+/* ---------- HOVER --------- */
+
+.favourite-folder > *:hover {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(311deg) brightness(101%) contrast(101%);
+}
+
+.play-icon :nth-child(3) {
+    font-size: 50px;
+}
+
+.play-icon :nth-child(3):hover {
+    transform: scale(1.2);
+}
+
+.time-bar div:hover {
+    background-color: greenyellow;
+}
+
+.time-bar div:hover .play-circle-time {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    align-self: center;
+
+}
+
 .audio-bar div:hover {
     background-color: greenyellow;
 }
@@ -450,7 +471,11 @@ section {
     align-self: center;
 }
 
-/*--------------- MEDIA QUERY ------------- */
+/*--------------------------------
+-----------MEDIA QUERY------------ 
+------------------------------- */
+
+/* 1100px */
 
 @media screen and (max-width: 1100px) {
     .music-cards {
@@ -459,6 +484,8 @@ section {
         flex-basis: calc((100% / 4) - 1rem)
     }
 }
+
+/* 600px */
 
 @media screen and (max-width: 600px) {
     /* NAV BAR */
@@ -484,20 +511,30 @@ section {
 
     .logo-spotify {
         width: 220%;
+        align-items: center;
     }
 
     .home, .search, .library {
         width: 60%;
+        align-items: center;
     }
 
     .nav-profile img {
-        width: 50%;
+        width: 100%;
+    }
+
+    .nav-install, .nav-profile img {
+        text-align: center;
     }
 
     .music-cards {
         width: 100%;
         flex-grow: 1;
         flex-basis: calc((100% / 2) - 1rem)
+    }
+
+    .play-icon {
+        gap: 1rem;
     }
 }
 
